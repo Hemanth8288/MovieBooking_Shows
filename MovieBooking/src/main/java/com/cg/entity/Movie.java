@@ -1,6 +1,14 @@
 package com.cg.entity;
 
 import java.time.LocalDate;
+
+/**
+ * @author-hemanth
+ * Movie Class Variable declarations
+ * Movie no argument constructor
+ * Movie constructor with parameters
+ * getters and setters
+ */
 import java.util.Date;
 
 public class Movie {
@@ -9,28 +17,23 @@ public class Movie {
 	private String movieGenre;
 	private String movieDirector;
 	private Integer movieLength;
-	//private String[] languages;
-	private LocalDate movieReleaseDate;
-	
-	public Movie() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	
 
-	public Movie(Integer movieId, String movieName, String movieGenre,
-			String movieDirector, Integer movieLength, LocalDate movieReleaseDate) {
+	private LocalDate movieReleaseDate;
+
+	public Movie() {
+
+	}
+
+	public Movie(Integer movieId, String movieName, String movieGenre, String movieDirector, Integer movieLength,
+			LocalDate movieReleaseDate) {
 		super();
 		this.movieId = movieId;
 		this.movieName = movieName;
 		this.movieGenre = movieGenre;
 		this.movieDirector = movieDirector;
 		this.movieLength = movieLength;
-		//this.languages=new String[] {"Hindi","Telugu","Tamil"};
 		this.movieReleaseDate = movieReleaseDate;
 	}
-
-
 
 	public Integer getMovieId() {
 		return movieId;
@@ -72,35 +75,17 @@ public class Movie {
 		this.movieLength = movieLength;
 	}
 
-	/*
-	public String[] getLanguages() {
-		return languages;
-	}
-
-	public void setLanguages(String[] languages) {
-		this.languages = languages;
-	}
-	*/
-
-
-
 	public LocalDate getMovieReleaseDate() {
 		return movieReleaseDate;
 	}
-
-
 
 	public void setMovieReleaseDate(LocalDate movieReleaseDate) {
 		this.movieReleaseDate = movieReleaseDate;
 	}
 
-
-
 	@Override
 	public String toString() {
-		return movieName+"   "+movieGenre+"   "+movieDirector+"   "+movieLength;
+		return movieName + "   " + movieGenre + "   " + movieDirector + "   " + movieLength;
 	}
-
-	
 
 }

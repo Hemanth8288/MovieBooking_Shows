@@ -3,21 +3,27 @@ package com.cg.entity;
 import java.time.LocalDateTime;
 import java.util.Date;
 
+/**
+ * @author-hemanth
+ * Show Class Variable declarations
+ * Show no argument constructor
+ * Show constructor with parameters
+ * getters and setters
+ */
 public class Show {
 	private String showId;
 	private LocalDateTime showStartTime;
-	
+
 	private String showName;
 	private Movie movieName;
 	private Integer screenId;
 	private Integer theatreId;
 
 	public Show() {
-		// TODO Auto-generated constructor stub
 	}
 
-	public Show(String showId, LocalDateTime showStartTime,String showName, Movie movieName,
-			Integer screenId, Integer theatreId) {
+	public Show(String showId, LocalDateTime showStartTime, String showName, Movie movieName, Integer screenId,
+			Integer theatreId) {
 
 		this.showId = showId;
 		this.showStartTime = showStartTime;
@@ -28,8 +34,6 @@ public class Show {
 
 	}
 
-	
-	
 	public String getShowId() {
 		return showId;
 	}
@@ -81,8 +85,8 @@ public class Show {
 	@Override
 	public String toString() {
 
-		return showId + "   " + showStartTime + "   " + showName + "   " + movieName + "   " + screenId
-				+ "   " + theatreId;
+		return showId + "   " + showStartTime + "   " + showName + "   " + movieName + "   " + screenId + "   "
+				+ theatreId;
 	}
 
 }
