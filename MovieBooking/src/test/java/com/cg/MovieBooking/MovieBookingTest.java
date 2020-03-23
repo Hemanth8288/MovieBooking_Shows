@@ -86,5 +86,11 @@ public class MovieBookingTest {
 		ShowDao ser = new ShowDaoImpl();
 		assertThrows(MovieException.class, () -> ser.getShows(1113));
 	}
+	@Test
+	@DisplayName("TC_MOVIE_UI_01")
+	public void movieBookingTest12() {
+		ShowDao ser = new ShowDaoImpl();
+		assertThrows(MovieException.class, () -> ser.getShows(1113));
+	}
 
 }
