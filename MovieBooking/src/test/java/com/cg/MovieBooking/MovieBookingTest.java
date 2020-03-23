@@ -7,6 +7,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.cg.exception.MovieException;
+import com.cg.moviebooking.dao.ShowDao;
+import com.cg.moviebooking.dao.ShowDaoImpl;
 import com.cg.service.ShowService;
 import com.cg.service.ShowServiceImpl;
 
@@ -30,17 +32,59 @@ public class MovieBookingTest {
 	}
 
 	@Test
-	@DisplayName("Test Validation for Wrong theatreId")
+	@DisplayName("TC_MOVIE_Ser_01")
 	public void movieBookingTest3() {
 		ShowService ser = new ShowServiceImpl();
-		assertThrows(MovieException.class, () -> ser.getShows(1112));
+		assertThrows(MovieException.class, () -> ser.getShows(10011001));
 	}
 
 	@Test
-	@DisplayName("Test Validation for Wrong theatreId")
+	@DisplayName("TC_MOVIE_Ser_02")
 	public void movieBookingTest4() {
 		ShowService ser = new ShowServiceImpl();
-		assertThrows(MovieException.class, () -> ser.getShows(123445));
+		assertThrows(MovieException.class, () -> ser.getShows(0));
+	}
+	@Test
+	@DisplayName("TC_MOVIE_Ser_03")
+	public void movieBookingTest5() {
+		ShowService ser = new ShowServiceImpl();
+		assertThrows(MovieException.class, () -> ser.getShows(1112));
+	}
+	@Test
+	@DisplayName("TC_MOVIE_Dao_01")
+	public void movieBookingTest6() {
+		ShowDao ser = new ShowDaoImpl();
+		assertThrows(MovieException.class, () -> ser.getShows(110011001));
+	}
+	@Test
+	@DisplayName("TC_MOVIE_Dao_02")
+	public void movieBookingTest7() {
+		ShowDao ser = new ShowDaoImpl();
+		assertThrows(MovieException.class, () -> ser.getShows(0));
+	}
+	@Test
+	@DisplayName("TC_MOVIE_Dao_03")
+	public void movieBookingTest8() {
+		ShowDao ser = new ShowDaoImpl();
+		assertThrows(MovieException.class, () -> ser.getTheatre(2223));
+	}
+	@Test
+	@DisplayName("TC_MOVIE_Dao_04")
+	public void movieBookingTest9() {
+		ShowDao ser = new ShowDaoImpl();
+		assertThrows(MovieException.class, () -> ser.getShows(11001101));
+	}
+	@Test
+	@DisplayName("TC_MOVIE_Dao_05")
+	public void movieBookingTest10() {
+		ShowDao ser = new ShowDaoImpl();
+		assertThrows(MovieException.class, () -> ser.getShows(0));
+	}
+	@Test
+	@DisplayName("TC_MOVIE_Dao_06")
+	public void movieBookingTest11() {
+		ShowDao ser = new ShowDaoImpl();
+		assertThrows(MovieException.class, () -> ser.getShows(1113));
 	}
 
 }
